@@ -11,6 +11,7 @@ __Resource is currently being built__ Reference this (document)[http://coweb.cc.
 
 ## From Problem to Design
 
+So far we have given you most of the technical specifications necessary for the projects you have been working on. Before giving you the project, us instructors met and planned the design of how we wanted the application to be designed. 
 
 
 ### Identify Nouns
@@ -26,3 +27,11 @@ __Resource is currently being built__ Reference this (document)[http://coweb.cc.
 
 
 ## Activity: Design a system for a vet office
+
+### The Problem:
+
+
+
+
+## Additional Resources
+- (Breaking the Problem Down PDF)[http://coweb.cc.gatech.edu/cs1316/uploads/629/Spring_2008_Breaking_the_Problem_Down_Problem_Solving_in_OO_Computer_Science.1.pdf]
