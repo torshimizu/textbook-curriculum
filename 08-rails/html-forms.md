@@ -77,3 +77,59 @@ Each `input` tag will pass a value along to the server when we submit the form. 
 And finally we have an `input` with the type of _submit_. This input creates a button to click that will send an HTTP request with the form data to the route in the `action` attribute of the `form` tag.
 
 Give it a try. It broke, right? We haven't taught our app how to make this work!
+
+
+### Make it Work
+
+When we push submit, a request is made to POST '/books/create'. That request maps to the create method of the Books controller. So we need to put code in that method to save a new book based on the user input from the form.
+
+Here is an example of how we would do that. Take a minute to observe what is going on. What is familiar and what is new?
+
+```ruby
+#books_controller.rb
+
+  def create
+    book = Book.new(
+      title: params[:title],
+      author: params[:author]
+    )
+
+    book.save
+
+    redirect_to(book_path(book.id)
+  end
+```
+
+First, we are creating a local variable to store a new instance of book. We are using a local variable because we are not going to pass that variable to a view. It is only ever going to be used in this method. 
+
+When we make the new instance of Book, we setting two attributes, title and author. In order to set those attributes to
+
+The params hash will always contain data from a form where the keys will be made from the values of the 'name' attributes of the input fields. The values of those keys are the user input.
+
+At the end, instead of creating a new page for this action, we can redirect it to another path. After creating a new record of a resource, like book, it's common to redirect to that new record's show page.
+
+
+Create the file.
+```bash
+$ touch app/views/books/show.html.erb
+```
+
+Create the show method, in `books_controller.rb`, that will find the book by the id we pass in the url. The id is accessible through the params hash.
+
+```ruby
+#books_controller.rb
+
+  def show
+    @book = Book.find(params[:id])
+  end
+```
+
+
+```html
+<!-- app/views/books/show.html.erb -->
+
+<h2> <%= @book.title %> </h2>
+<h3> <%= @book.author %> </h3>
+<p> <%= @book.description %> </p>
+
+```
