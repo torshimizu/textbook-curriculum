@@ -77,27 +77,3 @@ Each `input` tag will pass a value along to the server when we submit the form. 
 And finally we have an `input` with the type of _submit_. This input creates a button to click that will send an HTTP request with the form data to the route in the `action` attribute of the `form` tag.
 
 Give it a try. It broke, right? We haven't taught our app how to make this work!
-
-### Nested params
-Let's make our form a little bit smarter. We can submit nested data by manipulating the `name` attribute.
-
-```html
-  <input type="text" name="book[title]" value="" id="title">
-  <input type="text" name="book[author]" value="" id="author">
-```
-
-In Rails this is the way we _model_ data objects. We will expand upon this idea once we learn about Active Record, but until then, imagine a `Book` class where the initialize method is written to assign attributes from a hash. We would then pass the inner hash to the `new` method and all of our attributes would be assigned.
-
-```ruby
-# app/models/book.rb
-class Book
-  def initialize(options = {})
-    @title = options[:title]
-    @author = options[:author]
-  end
-end
-```
-```ruby
-# app/controllers/books_controller.rb
-book = Book.new(title: params[:book][:title], author: params[:book][:author])
-```
