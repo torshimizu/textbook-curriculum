@@ -16,7 +16,7 @@ Arrow functions have minimized _syntactic sugar_ compared to regular JavaScript 
 Traditional functions look like this:
 
 ```javascript
-const foo = function() {
+const foo = function foo() {
   return 'bar';
 }
 
@@ -65,7 +65,7 @@ Wow that's a lot less code.
 Here is an example for defining a function with no parameters which returns a string "hello world".  Convert this into an arrow function and minimize the code typed.
 
 ```javascript
-const hello = function() {
+const hello = function hello() {
   return 'hello world';
 };
 ```
