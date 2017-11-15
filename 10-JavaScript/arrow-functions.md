@@ -16,7 +16,7 @@ Arrow functions have minimized _syntactic sugar_ compared to regular JavaScript 
 Traditional functions look like this:
 
 ```javascript
-const foo = function foo() {
+const foo = function() {
   return 'bar';
 }
 
@@ -65,8 +65,8 @@ Wow that's a lot less code.
 Here is an example for defining a function with no parameters which returns a string "hello world".  Convert this into an arrow function and minimize the code typed.
 
 ```javascript
-const hello = function hello() {
-  return 'hello world'
+const hello = function() {
+  return 'hello world';
 };
 ```
 
@@ -74,8 +74,8 @@ const hello = function hello() {
 
 ```javascript
 const squarer = (number) => {
-  return number * number
-}
+  return number * number;
+};
 ```
 This arrow function takes a single number and returns that number squared.  Like normal functions arrow functions have their parameters listed in the parentheses.  
 
@@ -114,7 +114,7 @@ const makePerson = function(id, name) {
     id: id,
     name: name
   };
-}
+};
 ```
 
 You would need to surround the returned object with parentheses like this:
@@ -163,7 +163,7 @@ const obj = {
       this.thing += num;
     });
   }
-}
+};
 
 console.log(obj.thing); // 0
 obj.increment();
@@ -183,7 +183,7 @@ const obj = {
       that.thing += num;
     });
   }
-}
+};
 
 console.log(obj.thing); // 0
 obj.increment();
@@ -241,7 +241,7 @@ let fido = {
   age: 3,
   toString: () => {
     return `${this.name} is ${this.age} years old`; // error!
-  },
+  }
 };
 ```
 
