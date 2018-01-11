@@ -5,6 +5,22 @@
 #### Overview and Introduction to React.js
 
 ---
+### Agenda
+<ul>
+  <li>What is React?</li>
+  <li>Why React?</li>
+  <li>React Hello World</li>
+  <li>Components</li>
+  <li>props & state</li>
+  <li>Curriculum Overview<li>
+  <ul>
+    <li>Week 1</li>
+    <li>Week 2</li>
+    <li>Week 3</li>
+  </ul>
+<ul>
+
+---
 
 @title[PITCHME.md]
 
@@ -19,6 +35,7 @@
 
 <ul>
   <li>Many organizations are using React to create zippy web interfaces</li>
+  <li>Relevant and recent documentation with a large support community</li>
   <li>Article: <a href="https://medium.com/netflix-techblog/netflix-likes-react-509675426db">Netflix likes React</a></li>
   <li>Article: <a href="https://medium.com/@coderacademy/32-sites-built-with-reactjs-172e3a4bed81">32 Sites Built with React</a></li>
 </ul>
@@ -35,7 +52,63 @@
 
 ---
 
-###
+### React Hello World
+
+```shell
+npm install -g create-react-app
+create-react-app react-practice
+cd react-practice
+```
+
+@[1](Install the package that will set up npm and all necessary dependencies)
+@[2](Create a new react app called `react-practice`)
+@[3](Move into the folder created and open in text-editor)
+---
+
+### React Hello World
+
+By default we get an application that can be run using `npm start`. Give it a try!
+
+---
+
+### File Structure
+
+- `index.js` is the React file created automatically (not a component)
+- `app.js` is the outermost React component
+
+---
+
+### `app.js` code
+
+```javascript
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+@[1-3](Import React components and automatic dependencies)
+@[5](Name and create a component)
+@[6-15](Define the `render` function which will determine what JSX elements to display in the DOM)
+
+---
 
 #### No more <span class="gray">Keynote</span>.
 #### No more <span class="gray">Powerpoint</span>.
@@ -80,56 +153,3 @@ Done!
 <br>
 <br>
 #### Instantly use your GitPitch slideshow URL to promote, pitch or present absolutely anything.
-
----
-
-@title[Slide Rich]
-
-### <span class="gold">Slide Rich</span>
-
-#### Code Presenting for Blocks, Files, and GISTs
-#### Image, Video, Chart, and Math Slides
-#### Multiple Themes with Easy Customization
-<br>
-#### <span class="gold">Plus collaboration is built-in...</span>
-#### Your Slideshow is Part of Your Project
-#### Under Git Version Control within Your Git Repo
-
----
-
-@title[Feature Rich]
-
-### <span class="gold">Feature Rich</span>
-
-#### Present Online or Offline
-#### With Speaker Notes Support
-#### Print Presentation as PDF
-#### Auto-Generated Table-of-Contents
-#### Share Presentation on Twitter or LinkedIn
-
----
-
-### <span class="gold">GitPitch Pro - Coming Soon!</span>
-
-<br>
-<div class="left">
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"> </i><br>
-    <a href="https://gitpitch.com/pro-features" class="pro-link">
-    More details here.</a>
-</div>
-<div class="right">
-    <ul>
-        <li>Private Repos</li>
-        <li>Private URLs</li>
-        <li>Password-Protection</li>
-        <li>Image Opacity</li>
-        <li>SVG Image Support</li>
-    </ul>
-</div>
-
----
-
-### Go for it.
-### Just add <span class="gold">PITCHME.md</span> ;)
-<br>
-[Click here to learn more @fa[external-link fa-pad-left]](https://github.com/gitpitch/gitpitch/wiki)
