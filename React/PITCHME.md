@@ -140,7 +140,7 @@ JSX is the preprocessor step that converts an XML-like structure into HTML in th
 
 JSX is a lot less overhead than using Underscore templates.
 
-It is initially odd that all of the functionality is inside of a single component: Eventing, HTML, CSS (future), etc.
+It is initially odd that all of the functionality is inside of a single component: Data management, Eventing, HTML, CSS, etc.
 
 ---
 
@@ -149,8 +149,11 @@ In our very basic Hello World example we have a single component called `App`.
 
 ---
 ### Data Management
-Since React does not use the MVC structure, we must instead manage our data using the structures that React provides. These are **props** and **state**.
+Since React does not use the MVC structure, we must instead manage our data using the structures that React provides. These are <span class="gold">**props** and **state**</span>.
 
+---
+
+### Data Management
 There is an initial very basic analogy for these that we can draw:
 - **props** are like parameters that we pass into a method
 - **state** is like a local variable that can be used within a method
@@ -158,16 +161,25 @@ There is an initial very basic analogy for these that we can draw:
 ---
 
 ### `props`
-Props are passed into a component being rendered from an external component. Props can be assigned any variable name and set equal to any JavaScript object including variables and functions. Functions are key here!
-
-Props are accessed within a component using the `this.props` variable.
+- passed in from an external component
+- any variable name, any value: functions are key here!
+- props are <span class="gold">read only</span>
+- accessed using `this.props` variable
 
 ---
 
 ### `state`
-State must be managed within a single component. Within a component state cannot be modified directly from any other component. State can be assigned any variable name and set equal to any JavaScript object, though often state would not be used to store functions.
+- managed within a single component
+- cannot be modified directly from any other component
+- any variable name, any value
+- modified using <span class="gold">`setState`</span>
+- accessed using `this.state` variable
 
-State is modified using the `setState` function, and accessed using the `this.state` variable.
+---
+
+### More Detailed Sample App!
+
+<a href="https://github.com/kariabancroft/basic-react-sample">Basic React Sample</a>
 
 ---
 
