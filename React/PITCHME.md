@@ -177,9 +177,7 @@ Based off the existing BackTREK project.
 ---
 
 
-### Curriculum Overview: Week 2
-
-**Project**
+### Curriculum Overview: Week 2 Project
 Ada Trader
 
 **Learning Goals:**
@@ -190,5 +188,26 @@ Ada Trader
 - List items
 - Link components together with one another - passing data (and events) from one another
 - Integrate with some existing code that we provide
+
+---
+
+### Curriculum Overview: Week 3
+
+**Lectures**
+- API Integration
+
+---
+
+### Curriculum Overview: Week 3 Project
+Video Store Consumer
+
+**Learning Goals:**
+- Observe how interacting with data in firebase differs from a Rails API
+- Organize browser interactions based on React Component design patterns
+- Revisit Rails API functionality
+- Practice project management skills in prioritizing features and determining deliverables
+
+**Functionality**:
+
 
 ---
