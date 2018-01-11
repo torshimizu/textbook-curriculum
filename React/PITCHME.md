@@ -137,16 +137,58 @@ export default App;
 
 ### Curriculum Overview: Week 1
 
----?code=/React/README.md
-
 **Lectures**
-@[3]()
-@[4]()
+- Intro to React
+- Hello World
+- Creating Components
+- props & state
+- Firebase & basic lifecycle methods
+- Forms
 
 ---
 
 ### Curriculum Overview: Week 1
 
 **Project**
+
+TREaKt
+
+Based off the existing BackTREK project.
+
+**Learning Goals:**
+- Use React Components to structure an application
+- Utilize state and props to manage data passing in and out of components
+- Utilize events within the React construct
+- Use firebase to manage data storage along with component lifecycle methods
+
+**Functionality:**
+- Read from firebase: list and details
+- Create data in firebase
+
+---
+
+### Curriculum Overview: Week 2
+
+**Lectures**
+- Component Design
+- More with Lifecycle Methods
+- Testing
+
+---
+
+
+### Curriculum Overview: Week 2
+
+**Project**
+Ada Trader
+
+**Learning Goals:**
+- Create nested component structures that require nested event structures
+- Manage data within state and props utilizing component design patterns
+
+**Functionality:**
+- List items
+- Link components together with one another - passing data (and events) from one another
+- Integrate with some existing code that we provide
 
 ---
