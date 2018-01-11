@@ -137,7 +137,7 @@ export default App;
 
 ### Curriculum Overview: Week 1
 
----?code=/README.md
+---?code=/React/README.md
 
 **Lectures**
 @[3]()
