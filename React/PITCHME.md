@@ -11,7 +11,7 @@
   <li>Why React?</li>
   <li>React Hello World</li>
   <li>Components</li>
-  <li>props & state</li>
+  <li>Data Management</li>
   <li>Curriculum Overview
     <ul>
       <li>Week 1</li>
@@ -135,9 +135,43 @@ export default App;
 
 ---
 
-### Curriculum Overview: Week 1
+### JSX
+JSX is the preprocessor step that converts an XML-like structure into HTML in the DOM.
 
-**Lectures**
+JSX is a lot less overhead than using Underscore templates.
+
+It is initially odd that all of the functionality is inside of a single component: Eventing, HTML, CSS (future), etc.
+
+---
+
+### Nested Components
+In our very basic Hello World example we have a single component called `App`.
+
+---
+### Data Management
+Since React does not use the MVC structure, we must instead manage our data using the structures that React provides. These are **props** and **state**.
+
+There is an initial very basic analogy for these that we can draw:
+- **props** are like parameters that we pass into a method
+- **state** is like a local variable that can be used within a method
+
+---
+
+### `props`
+Props are passed into a component being rendered from an external component. Props can be assigned any variable name and set equal to any JavaScript object including variables and functions. Functions are key here!
+
+Props are accessed within a component using the `this.props` variable.
+
+---
+
+### `state`
+State must be managed within a single component. Within a component state cannot be modified directly from any other component. State can be assigned any variable name and set equal to any JavaScript object, though often state would not be used to store functions.
+
+State is modified using the `setState` function, and accessed using the `this.state` variable.
+
+---
+
+### Curriculum Overview: Week 1 Lectures
 - Intro to React
 - Hello World
 - Creating Components
@@ -147,13 +181,8 @@ export default App;
 
 ---
 
-### Curriculum Overview: Week 1
-
-**Project**
-
+### Curriculum Overview: Week 1 Project
 TREaKt
-
-Based off the existing BackTREK project.
 
 **Learning Goals:**
 - Use React Components to structure an application
@@ -167,12 +196,12 @@ Based off the existing BackTREK project.
 
 ---
 
-### Curriculum Overview: Week 2
-
-**Lectures**
+### Curriculum Overview: Week 2 Lectures
 - Component Design
 - More with Lifecycle Methods
+- More with props and state
 - Testing
+- Data validation using `propTypes`
 
 ---
 
@@ -191,9 +220,7 @@ Ada Trader
 
 ---
 
-### Curriculum Overview: Week 3
-
-**Lectures**
+### Curriculum Overview: Week 3 Lectures
 - API Integration
 
 ---
