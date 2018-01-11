@@ -12,12 +12,13 @@
   <li>React Hello World</li>
   <li>Components</li>
   <li>props & state</li>
-  <li>Curriculum Overview<li>
-  <ul>
-    <li>Week 1</li>
-    <li>Week 2</li>
-    <li>Week 3</li>
-  </ul>
+  <li>Curriculum Overview
+    <ul>
+      <li>Week 1</li>
+      <li>Week 2</li>
+      <li>Week 3</li>
+    </ul>
+  </li>
 <ul>
 
 ---
@@ -67,7 +68,9 @@ cd react-practice
 
 ### React Hello World
 
-By default we get an application that can be run using `npm start`. Give it a try!
+By default we get an application that can be run using `npm start`.
+
+Give it a try!
 
 ---
 
@@ -77,8 +80,30 @@ By default we get an application that can be run using `npm start`. Give it a tr
 - `app.js` is the outermost React component
 
 ---
+### `index.js`
 
-### `app.js` code
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
+
+```
+
+@[1-5](Default import statements)
+@[7](Render a single React component called `App` and add it to the DOM at HTML element "root")
+---
+
+### `index.js`
+
+Interestingly enough, we don't modify HTML files in a React application. We can find that initial "root" element in the file at `public/index.html`, though we won't really need to use the `index.html` file much more than that.
+---
+
+### `app.js`
 
 ```javascript
 import React, { Component } from 'react';
@@ -106,50 +131,22 @@ export default App;
 
 @[1-3](Import React components and automatic dependencies)
 @[5](Name and create a component)
-@[6-15](Define the `render` function which will determine what JSX elements to display in the DOM)
+@[6-18](Define the `render` function which will determine what JSX elements to display in the DOM)
 
 ---
 
-#### No more <span class="gray">Keynote</span>.
-#### No more <span class="gray">Powerpoint</span>.
-<br>
-#### Just <span class="gold">Markdown</span>.
-#### Then <span class="gold">Git-Commit</span>.
+### Curriculum Overview: Week 1
 
----?code=assets/md/hello.md&title=Step 1. PITCHME.md
+---?code=../README.md
 
-<br>
-#### Create slideshow content using GitHub Flavored Markdown in your favorite editor.
-
-<span class="aside">It's as easy as README.md with simple slide-delimeters (---)</span>
+**Lectures**
+@[3]()
+@[4]()
 
 ---
 
-@title[Step 2. Git-Commit]
+### Curriculum Overview: Week 1
 
-### <span class="gold">STEP 2. GIT-COMMIT</span>
-<br>
-
-```shell
-$ git add PITCHME.md
-$ git commit -m "New slideshow content."
-$ git push
-
-Done!
-```
-
-@[1](Add your PITCHME.md slideshow content file.)
-@[2](Commit PITCHME.md to your local repo.)
-@[3](Push PITCHME.md to your public repo and you're done!)
-@[5](Supports GitHub, GitLab, Bitbucket, GitBucket, Gitea, and Gogs.)
+**Project**
 
 ---
-
-@title[Step 3. Done!]
-
-### <span class="gold">STEP 3. GET THE WORD OUT!</span>
-<br>
-![GitPitch Slideshow URLs](assets/images/gp-slideshow-urls.png)
-<br>
-<br>
-#### Instantly use your GitPitch slideshow URL to promote, pitch or present absolutely anything.
